@@ -1,6 +1,3 @@
-import { Dialog } from '@headlessui/react';
-import { useRef, useState } from 'react';
-import { useAuthState } from '~/components/contexts/UserContext';
 import { Head } from '~/components/shared/Head';
 
 function Index() {
