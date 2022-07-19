@@ -7,7 +7,9 @@ const Loading = () => <p className="p-4 w-full h-full text-center">Loading...</p
 const IndexScreen = lazy(() => import('~/components/screens/Index'));
 const Page404Screen = lazy(() => import('~/components/screens/404'));
 const Ailen = lazy(() => import('~/components/mydemo/Demo'));
-const Test = lazy(() => import('~/components/Test/Test'));
+const Test = lazy(() => import('~/components/test/Test'));
+const Test2 = lazy(() => import('~/components/test/Test2'));
+const Test4 = lazy(() => import('~/components/test/Test4'));
 
 function Layout() {
   return (
@@ -19,6 +21,12 @@ function Layout() {
         </span>
         <span>
           <Link to="/test">Test</Link>
+        </span>
+        <span>
+          <Link to="/test2">Test2</Link>
+        </span>
+        <span>
+          <Link to="/test4">Form实践</Link>
         </span>
       </nav>
       <Outlet />
@@ -55,6 +63,14 @@ const InnerRouter = () => {
         {
           path: '/test',
           element: <Test />,
+        },
+        {
+          path: '/test2',
+          element: <Test2 />,
+        },
+        {
+          path: '/test4',
+          element: <Test4 />,
         },
       ],
     },

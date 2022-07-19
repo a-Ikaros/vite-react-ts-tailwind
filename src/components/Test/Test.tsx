@@ -16,18 +16,10 @@ export default class Test extends React.Component {
         <div style={style}>一个小盒子</div>
         <ul>
           {arr.map((item, index) => {
-            return (
-              <>
-                <li key={index}> {item}</li>
-                <span>行</span>
-              </>
-            );
+            return <li key={index}> {item}</li>;
           })}
         </ul>
       </>
     );
   }
 }
-
-
-

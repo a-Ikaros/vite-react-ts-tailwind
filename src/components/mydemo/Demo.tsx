@@ -4,6 +4,9 @@ const toLearn = ['react', 'vue', 'webpack', 'nodejs'];
 const TextComponent = () => <div> hello , i am function component </div>;
 
 class Ailen extends React.Component {
+  constructor(props:any) {
+    super(props);
+  }
   status = false; /* 状态 */
   renderFoot = () => <div> i am foot</div>;
   render() {
@@ -28,7 +31,9 @@ class Ailen extends React.Component {
         {this.status ? <TextComponent /> : <div>三元运算</div>}
         {/* 函数执行 */}
         {this.renderFoot()}
-        <button onClick={() => console.log(this.render())} background-color="red">打印render后的内容</button>
+        <button onClick={() => console.log(this.render())} background-color="red">
+          打印render后的内容
+        </button>
       </div>
     );
   }
